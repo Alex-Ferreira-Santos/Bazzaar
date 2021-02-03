@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
         flexDirection:'row',
     },
     header:{
-        flex:1,
         width: '100%',
+        backgroundColor: 'orange'
     },
     input: {
         backgroundColor: 'white',
@@ -30,22 +30,6 @@ const styles = StyleSheet.create({
         position: 'absolute',
         right: 5
     },
-    category:{
-        backgroundColor: 'orange',
-        borderColor:'#D7CCCC',
-        borderWidth: 1,
-        position: 'absolute',
-        right: 0,
-        top: 58
-    },
-    button:{
-        borderColor:'#D7CCCC',
-        borderWidth: 1,
-        backgroundColor: '#F6F6F6',
-        padding: 8,
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
 });
 
 export default styles
