@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
         zIndex: 0,
     },
     contentContainer:{
-        flex:1,
         justifyContent: 'flex-start',
         alignItems: 'center',
     },
@@ -77,6 +76,29 @@ const styles = StyleSheet.create({
     comprar:{
         fontSize: 18,
         color: 'white'
+    },
+    subtitle:{
+        fontSize: 25,
+        width: '100%',
+        marginLeft: 30,
+        marginBottom: 30
+    },
+    moda:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderColor: '#E5e5e5',
+        borderWidth: 1
+    },
+    produto:{
+        backgroundColor: '#c4c4c4',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginHorizontal: 10,
+        marginBottom: 5,
+    },
+    roupa:{
+        height: 200,
+        width: 200
     }
 });
 

@@ -21,7 +21,11 @@ class App extends Component {
   }
 
   render(){
-    const image = require('./src/img/model.jpg')
+    const capa = require('./src/img/model.jpg')
+    const feminino = require('./src/img/feminino1.jpg')
+    const feminino2 = require('./src/img/feminino2.jpg')
+    const feminino3 = require('./src/img/feminino3.jpg')
+    const feminino4 = require('./src/img/feminino4.jpg')
     return (
       <View style={styles.container}>
         <Header categoria={this.setCategory}/>
@@ -44,7 +48,7 @@ class App extends Component {
           </TouchableHighlight>
 
         </View>)}
-        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+        <ScrollView style={styles.Scrollcontainer} contentContainerStyle={styles.contentContainer}>
           <Text style={styles.title}>BAZZAAR</Text>
           <View style={styles.line}/>
 
@@ -55,10 +59,38 @@ class App extends Component {
                 <Text style={styles.comprar}>Comprar</Text>
               </TouchableOpacity>
             </View>
-            <Image source={image} style={styles.image}/>
+            <Image source={capa} style={styles.image}/>
           </View>
 
           <View style={styles.line}/>
+
+          <Text style={styles.subtitle}>Moda Feminina</Text>
+
+          <ScrollView horizontal={true} contentContainerStyle={styles.moda}>
+            <View style={styles.produto}>
+              <Image source={feminino} style={styles.roupa}/>
+              <Text>Roupa 1</Text>
+              <Text>R$40,00</Text>
+            </View>
+
+            <View style={styles.produto}>
+              <Image source={feminino2} style={styles.roupa}/>
+              <Text>Roupa 2</Text>
+              <Text>R$60,00</Text>
+            </View>
+
+            <View style={styles.produto}>
+              <Image source={feminino3} style={styles.roupa}/>
+              <Text>Roupa 3</Text>
+              <Text>R$80,00</Text>
+            </View>
+
+            <View style={styles.produto}>
+              <Image source={feminino4} style={styles.roupa}/>
+              <Text>Roupa 4</Text>
+              <Text>R$140,00</Text>
+            </View>
+          </ScrollView>
 
           <Text>'https://br.freepik.com/fotos/verao'Verão foto criado por halayalex - br.freepik.com</Text>
         </ScrollView>
