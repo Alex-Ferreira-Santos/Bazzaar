@@ -2,12 +2,16 @@ import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
     container:{
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         backgroundColor: '#403123',
         width: '100%',
         paddingVertical: 10,
         flexDirection:'row',
+    },
+    header:{
+        flex:1,
+        width: '100%',
     },
     input: {
         backgroundColor: 'white',
@@ -19,8 +23,8 @@ const styles = StyleSheet.create({
     },
     view:{
         flexDirection:'row',
-        width: '70%',
-        marginRight: 5
+        width: '73%',
+        marginHorizontal: 5
     },
     icon:{
         position: 'absolute',
@@ -28,6 +32,11 @@ const styles = StyleSheet.create({
     },
     category:{
         backgroundColor: 'orange',
+        borderColor:'#D7CCCC',
+        borderWidth: 1,
+        position: 'absolute',
+        right: 0,
+        top: 58
     },
     button:{
         borderColor:'#D7CCCC',
