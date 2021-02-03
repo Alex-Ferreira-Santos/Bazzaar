@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         zIndex: 1,
         height: 300,
         width: width - 10,
-        backgroundColor: 'rgba(0,0,0,0.6)',
+        backgroundColor: 'rgba(0,0,0,0.3)',
     },
     off:{
         fontSize: 20,
@@ -99,6 +99,15 @@ const styles = StyleSheet.create({
     roupa:{
         height: 200,
         width: 200
+    },
+    welcome:{
+        marginVertical: 10
+    },
+    center:{
+        textAlign:'center'
+    },
+    text:{
+        width: '90%'
     }
 });
 

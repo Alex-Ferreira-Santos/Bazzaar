@@ -30,6 +30,7 @@ class App extends Component {
     const masculino2 = require('./src/img/masculino2.jpg')
     const masculino3 = require('./src/img/masculino3.jpg')
     const masculino4 = require('./src/img/masculino4.jpg')
+    const loja = require('./src/img/loja.jpg')
     return (
       <View style={styles.container}>
         <Header categoria={this.setCategory}/>
@@ -126,7 +127,15 @@ class App extends Component {
             </View>
           </ScrollView>
 
+          <View style={styles.line}/>
+
+          <Text style={[styles.subtitle,styles.center,styles.welcome]}>Bem vindo a BAZZAAR</Text>
+          <Text style={[styles.center,styles.text,styles.welcome]}>Nossos produtos são inspirados pelas pessoas que estão à nossa volta, com suas belezas e qualidades. Produtos de bom gosto especialmente para você. Descubra <Text style={{color:'red'}}>our story</Text> e aproveite as promoções.</Text>
+          <Image source={loja} style={styles.image}/>
+
+
           <Text>'https://br.freepik.com/fotos/verao'Verão foto criado por halayalex - br.freepik.com</Text>
+          
         </ScrollView>
       </View>
     )
