@@ -26,6 +26,10 @@ class App extends Component {
     const feminino2 = require('./src/img/feminino2.jpg')
     const feminino3 = require('./src/img/feminino3.jpg')
     const feminino4 = require('./src/img/feminino4.jpg')
+    const masculino = require('./src/img/masculino1.jpg')
+    const masculino2 = require('./src/img/masculino2.jpg')
+    const masculino3 = require('./src/img/masculino3.jpg')
+    const masculino4 = require('./src/img/masculino4.jpg')
     return (
       <View style={styles.container}>
         <Header categoria={this.setCategory}/>
@@ -87,6 +91,36 @@ class App extends Component {
 
             <View style={styles.produto}>
               <Image source={feminino4} style={styles.roupa}/>
+              <Text>Roupa 4</Text>
+              <Text>R$140,00</Text>
+            </View>
+          </ScrollView>
+
+          <View style={styles.line}/>
+
+          <Text style={styles.subtitle}>Moda Masculina</Text>
+
+          <ScrollView horizontal={true} contentContainerStyle={styles.moda}>
+            <View style={styles.produto}>
+              <Image source={masculino} style={styles.roupa}/>
+              <Text>Roupa 1</Text>
+              <Text>R$40,00</Text>
+            </View>
+
+            <View style={styles.produto}>
+              <Image source={masculino2} style={styles.roupa}/>
+              <Text>Roupa 2</Text>
+              <Text>R$60,00</Text>
+            </View>
+
+            <View style={styles.produto}>
+              <Image source={masculino3} style={styles.roupa}/>
+              <Text>Roupa 3</Text>
+              <Text>R$80,00</Text>
+            </View>
+
+            <View style={styles.produto}>
+              <Image source={masculino4} style={styles.roupa}/>
               <Text>Roupa 4</Text>
               <Text>R$140,00</Text>
             </View>
