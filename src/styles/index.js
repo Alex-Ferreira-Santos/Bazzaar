@@ -108,6 +108,12 @@ const styles = StyleSheet.create({
     },
     text:{
         width: '90%'
+    },
+    address:{
+        backgroundColor: '#EEEEEE',
+    },
+    addressText:{
+        fontSize: 15
     }
 });
 
