@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 
 import Home from './src/components/HomePage'
+import Categorias from './src/components/Categorias'
 
 import Icon from 'react-native-vector-icons/Ionicons'
 
@@ -17,7 +18,7 @@ const icons = {
   Sobre_a_loja:{
     name:'business'
   },
-  Cartoes:{
+  Cartões:{
     name:'card-outline'
   }
 }
@@ -34,9 +35,9 @@ class App extends Component {
           }
         })}>
           <Tab.Screen name='Home' component={Home}/>
-          <Tab.Screen name='Categorias' component={Home}/>
+          <Tab.Screen name='Categorias' component={Categorias}/>
           <Tab.Screen name='Sobre_a_loja' component={Home}/>
-          <Tab.Screen name='Cartoes' component={Home}/>
+          <Tab.Screen name='Cartões' component={Home}/>
         </Tab.Navigator>
       </NavigationContainer>
     )

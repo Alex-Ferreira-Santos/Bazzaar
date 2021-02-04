@@ -13,8 +13,7 @@ class Header extends Component{
                         <Icon name='search' size={20} style={styles.icon}/>
                     </View>
                     <Icon name='log-in' size={30} color='#fff' accessible={true}accessibilityLabel={'Toque no canto superior direito e depois para a esquerda para fazer login!'}/>
-                    <Icon name='cart' size={30} color='#fff' accessible={true}accessibilityLabel={'Toque no canto superior direito e depois um pouco para a esquerda para ir para o carrinho!'}/>
-                    <Icon name='menu' size={35} color='#fff' onPress={()=>{this.props.categoria()}} accessible={true} accessibilityLabel={'Toque no canto superior direito para ver as categorias!'}/>
+                    <Icon name='cart' size={30} color='#fff' accessible={true}accessibilityLabel={'Toque no canto superior direito para ir para o carrinho!'}/>
                 </View>
             </View>
         )

@@ -8,18 +8,11 @@ class Home extends Component {
   constructor(props){
     super(props)
     this.state = {
-        category: false
+        
     }
-    this.setCategory = this.setCategory.bind(this)
+    
   }
 
-  setCategory(){
-    if(this.state.category){
-      this.setState({category: false})
-    }else{
-      this.setState({category: true})
-    }
-  }
 
   render(){
     const capa = require('../img/model.jpg')
@@ -35,26 +28,9 @@ class Home extends Component {
     const loja2 = require('../img/loja2.jpg')
     return (
       <View style={styles.container}>
-        <Header categoria={this.setCategory}/>
-        {this.state.category && (<View style={styles.category} accessibilityLiveRegion="polite">
 
-          <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>this.setState({category: false})}>
-            <Text>Novidades</Text>
-          </TouchableHighlight>
+        <Header/>
 
-          <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>this.setState({category: false})}>
-            <Text>Promoções</Text>
-          </TouchableHighlight>
-
-          <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>this.setState({category: false})}>
-            <Text>Feminino</Text>
-          </TouchableHighlight>
-
-          <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>this.setState({category: false})}>
-            <Text>Masculino</Text>
-          </TouchableHighlight>
-
-        </View>)}
         <ScrollView style={styles.Scrollcontainer} contentContainerStyle={styles.contentContainer}>
           <Text style={styles.title}>BAZZAAR</Text>
           <View style={styles.line}/>
