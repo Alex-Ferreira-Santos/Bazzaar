@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import {ScrollView,View,Text,Image, TouchableOpacity,TouchableHighlight} from 'react-native'
 import styles from './src/styles/index'
 import Header from './src/components/Header'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 class App extends Component {
   constructor(props){
@@ -143,6 +144,19 @@ class App extends Component {
 
           <View style={styles.line}/>
 
+          
+          <Text style={styles.follow}>Siga-nos</Text>
+          <View style={styles.redes}>
+            <Icon name='logo-twitter' size={30} color='#000'/>
+            <Icon name='logo-facebook' size={30} color='#000'/>
+            <Icon name='logo-pinterest' size={30} color='#000'/>
+            <Icon name='logo-instagram' size={30} color='#000'/>
+            <Icon name='logo-snapchat' size={30} color='#000'/>
+          </View>
+
+          <View style={styles.line}/>
+
+          <Text style={styles.follow}>Aceitamos</Text>
 
           <Text>'https://br.freepik.com/fotos/verao'Verão foto criado por halayalex - br.freepik.com</Text>
           

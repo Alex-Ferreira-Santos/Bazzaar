@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View,Text,TextInput,TouchableHighlight} from 'react-native'
+import {View,TextInput,t} from 'react-native'
 import styles from '../styles/header'
 import Icon from 'react-native-vector-icons/Ionicons'
 

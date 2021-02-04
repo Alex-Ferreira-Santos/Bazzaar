@@ -114,6 +114,16 @@ const styles = StyleSheet.create({
     },
     addressText:{
         fontSize: 15
+    },
+    follow:{
+        fontSize: 20,
+        marginBottom: 20
+        
+    },
+    redes:{
+        flexDirection:'row',
+        justifyContent: 'space-around',
+        width: '80%'
     }
 });
 
