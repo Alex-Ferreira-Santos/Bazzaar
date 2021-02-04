@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {ScrollView,View,Text,Image, TouchableOpacity,TouchableHighlight} from 'react-native'
+import {ScrollView,View,Text,Image, TouchableOpacity,TouchableHighlight, Linking} from 'react-native'
 import styles from './src/styles/index'
 import Header from './src/components/Header'
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Header categoria={this.setCategory}/>
-        {this.state.category && (<View style={styles.category}>
+        {this.state.category && (<View style={styles.category} accessibilityLiveRegion="polite">
 
           <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>this.setState({category: false})}>
             <Text>Novidades</Text>
@@ -62,12 +62,13 @@ class App extends Component {
           <View style={styles.thumb}>
             <View style={styles.buy}>
               <Text style={styles.off}>Até 50% de desconto</Text>
-              <TouchableOpacity style={styles.button}>
+              <TouchableOpacity style={styles.button} accessible={true}accessibilityLabel={'Toque no centro esquerdo para enviar!'}>
                 <Text style={styles.comprar}>Comprar</Text>
               </TouchableOpacity>
             </View>
             <Image source={capa} style={styles.image}/>
           </View>
+          <Text onPress={()=>Linking.openURL('https://br.freepik.com/fotos/verao')}>Verão foto criado por halayalex - br.freepik.com</Text>
 
           <View style={styles.line}/>
 
@@ -156,9 +157,7 @@ class App extends Component {
 
           <View style={styles.line}/>
 
-          <Text style={styles.follow}>Aceitamos</Text>
-
-          <Text>'https://br.freepik.com/fotos/verao'Verão foto criado por halayalex - br.freepik.com</Text>
+          <Text style={styles.follow}>Aceitamos diversos tipos de cartões</Text>
           
         </ScrollView>
       </View>
