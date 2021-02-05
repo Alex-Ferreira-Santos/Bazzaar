@@ -11,23 +11,6 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
     },
-    category:{
-        backgroundColor: 'orange',
-        borderColor:'#D7CCCC',
-        borderWidth: 1,
-        position: 'absolute',
-        zIndex:1,
-        right: 0,
-        top: 58,
-    },
-    categoryButton:{
-        borderColor:'#D7CCCC',
-        borderWidth: 1,
-        backgroundColor: '#F6F6F6',
-        padding: 8,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
     title:{
         fontSize: 40,
         marginLeft: 30,

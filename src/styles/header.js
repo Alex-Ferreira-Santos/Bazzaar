@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     },
     view:{
         flexDirection:'row',
-        width: '73%',
+        width: '80%',
         marginHorizontal: 5
     },
     icon:{
