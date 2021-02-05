@@ -10,9 +10,8 @@ class Masculino extends Component {
         const masculino4 = require('../img/masculino4.jpg')
         return (
             <View>
-                <Text style={styles.subtitle}>Moda Masculina</Text>
 
-                <ScrollView horizontal={true} contentContainerStyle={styles.moda}>
+                <ScrollView contentContainerStyle={styles.moda}>
                 <View style={styles.produto}>
                     <Image source={masculino} style={styles.roupa}/>
                     <Text>Roupa 1</Text>

@@ -12,7 +12,8 @@ class Categorias extends Component {
             name: 'arrow-up-sharp',
             show: true,
             text:'Ocultar',
-            feminino:false
+            feminino: false,
+            masculino: false,
         }
     }
     render() {
@@ -46,11 +47,19 @@ class Categorias extends Component {
                         <Text>Promoções</Text>
                     </TouchableHighlight>
 
-                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{this.setState({feminino: true})}}>
+                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
+                        this.setState({feminino: true})
+                        this.setState({masculino: false})
+                        
+                        }}>
                         <Text>Feminino</Text>
                     </TouchableHighlight>
 
-                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{}}>
+                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
+                        this.setState({masculino: true})
+                        this.setState({feminino: false})
+                        
+                        }}>
                         <Text>Masculino</Text>
                     </TouchableHighlight>
 
@@ -61,6 +70,13 @@ class Categorias extends Component {
                             <Feminino/>
                         </ScrollView>
                     )}
+                    {this.state.masculino && ( 
+                        <ScrollView>
+                            <Text style={styles.subtitle}>Moda Masculina</Text>
+                            <Masculino/>
+                        </ScrollView>
+                    )}
+                    
             </View>
         )
     }

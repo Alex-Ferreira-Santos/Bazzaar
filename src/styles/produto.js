@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
     roupa:{
         maxHeight: height,
-        width: width - 100
+        width: width - 70
     },
 })
 
