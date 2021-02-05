@@ -6,6 +6,7 @@ import Home from './src/components/HomePage'
 import Categorias from './src/components/Categorias'
 
 import Icon from 'react-native-vector-icons/Ionicons'
+import Sobre from './src/components/Sobre';
 
 const Tab = createBottomTabNavigator()
 const icons = {
@@ -36,7 +37,7 @@ class App extends Component {
         })}>
           <Tab.Screen name='Home' component={Home}/>
           <Tab.Screen name='Categorias' component={Categorias}/>
-          <Tab.Screen name='Sobre_a_loja' component={Home}/>
+          <Tab.Screen name='Sobre_a_loja' component={Sobre}/>
           <Tab.Screen name='Cartões' component={Home}/>
         </Tab.Navigator>
       </NavigationContainer>
