@@ -20,6 +20,8 @@ class Sobre extends Component {
                     <Text style={[styles.center,{marginVertical: 10}]}>Aberto de segunda a sexta das 10:00 às 21:00</Text>
                 </View>
 
+                <View style={styles.line}/>
+
                 <Text style={styles.follow}>Siga-nos</Text>
                 <View style={styles.redes}>
                     <Icon name='logo-twitter' size={30} color='#000'/>

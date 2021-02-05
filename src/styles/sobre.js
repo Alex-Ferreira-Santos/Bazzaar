@@ -40,8 +40,15 @@ const styles = StyleSheet.create({
     redes:{
         flexDirection:'row',
         justifyContent: 'space-around',
-        width: '80%'
-    }
+        width: '80%',
+        marginBottom: 10
+    },
+    line:{
+        height: 1,
+        width: '90%',
+        backgroundColor: '#D1D1D1',
+        marginVertical: 20
+    },
 })
 
 export default styles

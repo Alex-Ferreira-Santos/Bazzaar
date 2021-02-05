@@ -83,31 +83,6 @@ const styles = StyleSheet.create({
         height: 200,
         width: 200
     },
-    welcome:{
-        marginVertical: 10
-    },
-    center:{
-        textAlign:'center'
-    },
-    text:{
-        width: '90%'
-    },
-    address:{
-        backgroundColor: '#EEEEEE',
-    },
-    addressText:{
-        fontSize: 15
-    },
-    follow:{
-        fontSize: 20,
-        marginBottom: 20
-        
-    },
-    redes:{
-        flexDirection:'row',
-        justifyContent: 'space-around',
-        width: '80%'
-    }
 });
 
 export default styles

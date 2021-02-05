@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import {ScrollView,View,Text,Image, TouchableOpacity,TouchableHighlight, Linking} from 'react-native'
 import styles from '../styles/index'
 import Header from './Header'
-import Icon from 'react-native-vector-icons/Ionicons'
 
 class Home extends Component {
   constructor(props){
@@ -105,7 +104,6 @@ class Home extends Component {
           </ScrollView>
 
 
-          <Text style={styles.follow}>Aceitamos diversos tipos de cartões</Text>
           
         </ScrollView>
       </View>
