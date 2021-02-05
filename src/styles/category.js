@@ -13,6 +13,21 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    expandir:{
+        backgroundColor: 'orange',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingVertical: 3
+    },
+    buttonText:{
+        fontSize: 20,
+    },
+    subtitle:{
+        fontSize: 25,
+        width: '100%',
+        marginVertical: 15,
+        textAlign: 'center'
+    },
 })
 
 export default styles

@@ -1,28 +1,31 @@
-import {StyleSheet} from 'react-native'
+import {StyleSheet,Dimensions} from 'react-native'
+
+const width = Dimensions.get('screen').width
+const height = Dimensions.get('screen').height
 
 const styles = StyleSheet.create({
     subtitle:{
         fontSize: 25,
         width: '100%',
-        marginLeft: 30,
-        marginBottom: 30
+        marginVertical: 15,
+        textAlign: 'center'
     },
     moda:{
-        justifyContent: 'center',
         alignItems: 'center',
         borderColor: '#E5e5e5',
-        borderWidth: 1
+        borderWidth: 1,
     },
     produto:{
         backgroundColor: '#c4c4c4',
         justifyContent: 'center',
         alignItems: 'center',
-        marginHorizontal: 10,
-        marginBottom: 5,
+        marginBottom: 20,
+        borderWidth: 1,
+        borderColor: '#E5e5e5',
     },
     roupa:{
-        height: 200,
-        width: 200
+        maxHeight: height,
+        width: width - 100
     },
 })
 

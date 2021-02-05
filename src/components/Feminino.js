@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View,Text,Image} from 'react-native'
+import {View,Text,Image,ScrollView} from 'react-native'
 import styles from '../styles/produto'
 
 class Feminino extends Component {
@@ -10,8 +10,7 @@ class Feminino extends Component {
         const feminino4 = require('../img/feminino4.jpg')
         return (
             <View>
-                <Text style={styles.subtitle}>Moda Feminina</Text>
-                <ScrollView horizontal={true} contentContainerStyle={styles.moda}>
+                <ScrollView contentContainerStyle={styles.moda}>
                     <View style={styles.produto}>
                         <Image source={feminino} style={styles.roupa}/>
                         <Text>Roupa 1</Text>
