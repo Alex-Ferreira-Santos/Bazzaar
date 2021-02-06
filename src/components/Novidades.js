@@ -12,24 +12,28 @@ class Novidades extends Component {
             <View>
                 <ScrollView contentContainerStyle={styles.moda}>
                 <View style={styles.produto}>
+                    <Text style={styles.novo}>Novo!</Text>
                     <Image source={feminino} style={styles.roupa}/>
                     <Text>Roupa 1</Text>
                     <Text>R$40,00</Text>
                 </View>
 
                 <View style={styles.produto}>
+                    <Text style={styles.novo}>Novo!</Text>
                     <Image source={feminino2} style={styles.roupa}/>
                     <Text>Roupa 2</Text>
                     <Text>R$80,00</Text>
                 </View>
 
                 <View style={styles.produto}>
+                    <Text style={styles.novo}>Novo!</Text>
                     <Image source={masculino3} style={styles.roupa}/>
                     <Text>Roupa 3</Text>
                     <Text>R$120,00</Text>
                 </View>
 
                 <View style={styles.produto}>
+                    <Text style={styles.novo}>Novo!</Text>
                     <Image source={masculino4} style={styles.roupa}/>
                     <Text>Roupa 4</Text>
                     <Text>R$140,00</Text>

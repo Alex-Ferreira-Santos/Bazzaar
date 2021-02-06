@@ -33,6 +33,17 @@ const styles = StyleSheet.create({
     },
     now:{
         color:'green'
+    },
+    novo:{
+        position: 'absolute',
+        zIndex:1,
+        backgroundColor:'#3bccb9',
+        paddingVertical: 5,
+        paddingHorizontal: 10,
+        borderRadius: 10,
+        top:15,
+        left: 15,
+        fontSize: 20
     }
 })
 
