@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {View,Text,ScrollView,Image} from 'react-native'
 import styles from '../styles/produto'
 
-class Novidades extends Component {
+class Promocoes extends Component {
     render() {
         const feminino = require('../img/feminino1.jpg')
         const feminino2 = require('../img/feminino2.jpg')
@@ -14,25 +14,25 @@ class Novidades extends Component {
                 <View style={styles.produto}>
                     <Image source={feminino} style={styles.roupa}/>
                     <Text>Roupa 1</Text>
-                    <Text>R$40,00</Text>
+                    <Text>De <Text style={styles.last}>R$60,00</Text> por <Text style={styles.now}>R$40,00</Text></Text>
                 </View>
 
                 <View style={styles.produto}>
                     <Image source={feminino2} style={styles.roupa}/>
                     <Text>Roupa 2</Text>
-                    <Text>R$80,00</Text>
+                    <Text>De <Text style={styles.last}>R$80,00</Text> por <Text style={styles.now}>R$60,00</Text></Text>
                 </View>
 
                 <View style={styles.produto}>
                     <Image source={masculino3} style={styles.roupa}/>
                     <Text>Roupa 3</Text>
-                    <Text>R$120,00</Text>
+                    <Text>De <Text style={styles.last}>R$120,00</Text> por <Text style={styles.now}>R$80,00</Text></Text>
                 </View>
 
                 <View style={styles.produto}>
                     <Image source={masculino4} style={styles.roupa}/>
                     <Text>Roupa 4</Text>
-                    <Text>R$140,00</Text>
+                    <Text>De <Text style={styles.last}>R$140,00</Text> por <Text style={styles.now}>R$110,00</Text></Text>
                 </View>
                 </ScrollView>
             </View>
@@ -40,4 +40,4 @@ class Novidades extends Component {
     }
 }
 
-export default Novidades
+export default Promocoes

@@ -16,6 +16,7 @@ class Categorias extends Component {
             feminino: false,
             masculino: false,
             novidades: false,
+            promocoes: false,
         }
     }
     render() {
@@ -45,11 +46,17 @@ class Categorias extends Component {
                         this.setState({feminino: false})
                         this.setState({masculino: false})
                         this.setState({novidades: true})
+                        this.setState({promocoes: false})
                     }}>
                         <Text>Novidades</Text>
                     </TouchableHighlight>
 
-                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{}}>
+                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
+                        this.setState({feminino: false})
+                        this.setState({masculino: false})
+                        this.setState({novidades: false})
+                        this.setState({promocoes: true})
+                    }}>
                         <Text>Promoções</Text>
                     </TouchableHighlight>
 
@@ -57,7 +64,7 @@ class Categorias extends Component {
                         this.setState({feminino: true})
                         this.setState({masculino: false})
                         this.setState({novidades: false})
-                        
+                        this.setState({promocoes: false})
                         }}>
                         <Text>Feminino</Text>
                     </TouchableHighlight>
@@ -66,7 +73,7 @@ class Categorias extends Component {
                         this.setState({masculino: true})
                         this.setState({feminino: false})
                         this.setState({novidades: false})
-                        
+                        this.setState({promocoes: false})
                         }}>
                         <Text>Masculino</Text>
                     </TouchableHighlight>
