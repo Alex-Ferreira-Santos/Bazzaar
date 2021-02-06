@@ -27,6 +27,13 @@ const styles = StyleSheet.create({
         maxHeight: height,
         width: width - 70
     },
+    last:{
+        color:'red',
+        textDecorationLine:'line-through'
+    },
+    now:{
+        color:'green'
+    }
 })
 
 export default styles

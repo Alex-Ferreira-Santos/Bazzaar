@@ -3,6 +3,7 @@ import {View,Text,TouchableHighlight,ScrollView} from 'react-native'
 import styles from '../styles/category'
 import Masculino from './Masculino'
 import Feminino from './Feminino'
+import Novidades from './Novidades'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 class Categorias extends Component {
@@ -14,6 +15,7 @@ class Categorias extends Component {
             text:'Ocultar',
             feminino: false,
             masculino: false,
+            novidades: false,
         }
     }
     render() {
@@ -39,7 +41,11 @@ class Categorias extends Component {
 
                 {this.state.show && (<View style={styles.category}>
 
-                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{}}>
+                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
+                        this.setState({feminino: false})
+                        this.setState({masculino: false})
+                        this.setState({novidades: true})
+                    }}>
                         <Text>Novidades</Text>
                     </TouchableHighlight>
 
@@ -50,6 +56,7 @@ class Categorias extends Component {
                     <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
                         this.setState({feminino: true})
                         this.setState({masculino: false})
+                        this.setState({novidades: false})
                         
                         }}>
                         <Text>Feminino</Text>
@@ -58,6 +65,7 @@ class Categorias extends Component {
                     <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
                         this.setState({masculino: true})
                         this.setState({feminino: false})
+                        this.setState({novidades: false})
                         
                         }}>
                         <Text>Masculino</Text>
@@ -74,6 +82,12 @@ class Categorias extends Component {
                         <ScrollView>
                             <Text style={styles.subtitle}>Moda Masculina</Text>
                             <Masculino/>
+                        </ScrollView>
+                    )}
+                    {this.state.novidades && ( 
+                        <ScrollView>
+                            <Text style={styles.subtitle}>Novidades</Text>
+                            <Novidades/>
                         </ScrollView>
                     )}
                     
