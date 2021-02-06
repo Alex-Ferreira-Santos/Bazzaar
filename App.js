@@ -37,7 +37,7 @@ class App extends Component {
           }
         })}>
           <Tab.Screen name='Home' component={Home}/>
-          <Tab.Screen name='Categorias' component={Categorias}/>
+          <Tab.Screen name='Categorias' component={Categorias} initialParams={{promocoes: false, show: true, text: 'Ocultar', name: 'arrow-up-sharp',feminino: false,masculino:false,novidades: false}}/>
           <Tab.Screen name='Sobre_a_loja' component={Sobre}/>
           <Tab.Screen name='Cartões' component={Cartoes}/>
         </Tab.Navigator>

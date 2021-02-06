@@ -4,8 +4,8 @@ import styles from '../styles/produto'
 
 class Promocoes extends Component {
     render() {
-        const feminino = require('../img/feminino1.jpg')
-        const feminino2 = require('../img/feminino2.jpg')
+        const feminino = require('../img/feminino3.jpg')
+        const feminino2 = require('../img/feminino4.jpg')
         const masculino3 = require('../img/masculino3.jpg')
         const masculino4 = require('../img/masculino4.jpg')
         return (

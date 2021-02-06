@@ -4,6 +4,7 @@ import styles from '../styles/category'
 import Masculino from './Masculino'
 import Feminino from './Feminino'
 import Novidades from './Novidades'
+import Promocoes from './Promocoes'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 class Categorias extends Component {
@@ -18,20 +19,39 @@ class Categorias extends Component {
             novidades: false,
             promocoes: false,
         }
+        this.atribuiParams = this.atribuiParams.bind(this)
+        this.atribuiParams()
+    }
+    atribuiParams(){
+        const params = this.props.route.params
+        this.state.promocoes = params.promocoes
+        if(this.state.promocoes){
+            this.state.show = params.show
+            this.state.masculino = params.masculino
+            this.state.feminino = params.feminino
+            this.state.novidades = params.novidades
+        }
+        this.state.text = params.text
+        this.state.name = params.name
     }
     render() {
+        const params = this.props.route.params
+        if(params.promocoes){
+            this.atribuiParams()
+        }
         return (
-            <View style={{flex:1,}}>
+            <View style={{flex:1}}>
                 <TouchableHighlight style={styles.expandir} onPress={()=>{
                     if(this.state.show){
-                        this.setState({show: false})
-                        this.setState({text:'Expandir'})
-                        this.setState({name:'arrow-down'})
-                        
+                        params.show = false
+                        params.text = 'Expandir'
+                        params.name = 'arrow-down'
+                        this.setState({show:params.show})
                     }else{
-                        this.setState({show: true})
-                        this.setState({text:'Ocultar'})
-                        this.setState({name:'arrow-up-sharp'})
+                        params.show = true 
+                        params.text = 'Ocultar'
+                        params.name = 'arrow-up-sharp'
+                        this.setState({show:params.show})
                     }
                 }} underlayColor='#EA9700'>
                     <View style={{flexDirection: 'row'}}>
@@ -43,10 +63,14 @@ class Categorias extends Component {
                 {this.state.show && (<View style={styles.category}>
 
                     <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
-                        this.setState({feminino: false})
-                        this.setState({masculino: false})
-                        this.setState({novidades: true})
-                        this.setState({promocoes: false})
+                        params.feminino = false
+                        params.masculino = false
+                        params.novidades = true
+                        params.promocoes = false
+                        this.setState({feminino: params.feminino})
+                        this.setState({masculino: params.Masculino})
+                        this.setState({novidades: params.novidades})
+                        this.setState({promocoes: params.promocoes})
                     }}>
                         <Text>Novidades</Text>
                     </TouchableHighlight>
@@ -95,6 +119,12 @@ class Categorias extends Component {
                         <ScrollView>
                             <Text style={styles.subtitle}>Novidades</Text>
                             <Novidades/>
+                        </ScrollView>
+                    )}
+                    {this.state.promocoes && ( 
+                        <ScrollView>
+                            <Text style={styles.subtitle}>Promoções</Text>
+                            <Promocoes/>
                         </ScrollView>
                     )}
                     

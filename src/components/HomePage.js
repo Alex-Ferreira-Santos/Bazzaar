@@ -27,10 +27,10 @@ class Home extends Component {
           <View style={styles.thumb}>
             <View style={styles.buy}>
               <Text style={styles.off}>Até 50% de desconto</Text>
-              <TouchableOpacity style={styles.button} accessible={true}accessibilityLabel={'Toque no centro esquerdo para enviar!'}>
+              <TouchableOpacity style={styles.button} accessible={true}accessibilityLabel={'Toque no centro esquerdo para enviar!'} onPress={()=>this.props.navigation.navigate('Categorias',{promocoes:true,show:false,text:'Expandir',name:'arrow-down',feminino: false,masculino:false,novidades: false})}>
                 <Text style={styles.comprar}>Comprar</Text>
               </TouchableOpacity>
-            </View>
+            </View> 
             <Image source={capa} style={styles.image}/>
           </View>
           <Text onPress={()=>Linking.openURL('https://br.freepik.com/fotos/verao')}>Verão foto criado por halayalex - br.freepik.com</Text>
