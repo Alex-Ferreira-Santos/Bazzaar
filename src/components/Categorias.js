@@ -25,6 +25,7 @@ class Categorias extends Component {
     atribuiParams(){
         const params = this.props.route.params
         this.state.promocoes = params.promocoes
+        console.log(params)
         if(this.state.promocoes){
             this.state.show = params.show
             this.state.masculino = params.masculino
@@ -66,19 +67,18 @@ class Categorias extends Component {
                 {this.state.show && (<View style={styles.category}>
 
                     <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
-                        params.feminino = false
-                        params.masculino = false
-                        params.novidades = true
+                        
                         params.promocoes = false
-                        this.setState({feminino: params.feminino})
-                        this.setState({masculino: params.Masculino})
-                        this.setState({novidades: params.novidades})
+                        this.setState({feminino: false})
+                        this.setState({masculino: false})
+                        this.setState({novidades: true})
                         this.setState({promocoes: params.promocoes})
                     }}>
                         <Text>Novidades</Text>
                     </TouchableHighlight>
 
                     <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
+                        params.promocoes = false
                         this.setState({feminino: false})
                         this.setState({masculino: false})
                         this.setState({novidades: false})
@@ -88,19 +88,21 @@ class Categorias extends Component {
                     </TouchableHighlight>
 
                     <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
+                        params.promocoes = false
                         this.setState({feminino: true})
                         this.setState({masculino: false})
                         this.setState({novidades: false})
-                        this.setState({promocoes: false})
+                        this.setState({promocoes: params.promocoes})
                         }}>
                         <Text>Feminino</Text>
                     </TouchableHighlight>
 
                     <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
+                        params.promocoes = false
                         this.setState({masculino: true})
                         this.setState({feminino: false})
                         this.setState({novidades: false})
-                        this.setState({promocoes: false})
+                        this.setState({promocoes: params.promocoes})
                         }}>
                         <Text>Masculino</Text>
                     </TouchableHighlight>
