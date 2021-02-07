@@ -12,7 +12,7 @@ class Feminino extends Component {
             <View>
                 <ScrollView contentContainerStyle={styles.moda}>
                     <TouchableNativeFeedback onPress={()=>{
-                            this.props.image(feminino)
+                            this.props.image(feminino,'Roupa 1','R$40,00')
                     }}>
                         <View style={styles.produto}>          
                             <Image source={feminino} style={styles.roupa}/>
@@ -22,7 +22,7 @@ class Feminino extends Component {
                     </TouchableNativeFeedback>
 
                     <TouchableNativeFeedback onPress={()=>{
-                            this.props.image(feminino2)
+                            this.props.image(feminino2,'Roupa 2','R$60,00')
                     }}>
                         <View style={styles.produto}>               
                             <Image source={feminino2} style={styles.roupa}/>   
@@ -32,7 +32,7 @@ class Feminino extends Component {
                     </TouchableNativeFeedback>
 
                     <TouchableNativeFeedback onPress={()=>{
-                            this.props.image(feminino3)
+                            this.props.image(feminino3,'Roupa 3','R$80,00')
                     }}>
                         <View style={styles.produto}>     
                             <Image source={feminino3} style={styles.roupa}/>
@@ -42,7 +42,7 @@ class Feminino extends Component {
                     </TouchableNativeFeedback>
 
                     <TouchableNativeFeedback onPress={()=>{
-                            this.props.image(feminino4)
+                            this.props.image(feminino4,'Roupa 4','R$140,00')
                     }}>
                         <View style={styles.produto}>                        
                             <Image source={feminino4} style={styles.roupa}/>

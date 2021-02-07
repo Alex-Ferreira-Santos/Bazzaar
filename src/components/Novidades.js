@@ -13,7 +13,7 @@ class Novidades extends Component {
                 <ScrollView contentContainerStyle={styles.moda}>
 
                     <TouchableNativeFeedback onPress={()=>{
-                                this.props.image(feminino)
+                        this.props.image(feminino,'Roupa 1','R$40,00')
                     }}>
                         <View style={styles.produto}>
                             <Text style={styles.novo}>Novo!</Text>
@@ -24,7 +24,7 @@ class Novidades extends Component {
                     </TouchableNativeFeedback>
 
                     <TouchableNativeFeedback onPress={()=>{
-                                this.props.image(feminino2)
+                        this.props.image(feminino2,'Roupa 2','R$80,00')
                     }}>
                     <View style={styles.produto}>
                         <Text style={styles.novo}>Novo!</Text>
@@ -35,7 +35,7 @@ class Novidades extends Component {
                     </TouchableNativeFeedback>
 
                     <TouchableNativeFeedback onPress={()=>{
-                                this.props.image(masculino3)
+                        this.props.image(masculino3,'Roupa 3','R$120,00')
                     }}>
                         <View style={styles.produto}>
                             <Text style={styles.novo}>Novo!</Text>
@@ -46,7 +46,7 @@ class Novidades extends Component {
                     </TouchableNativeFeedback>
 
                     <TouchableNativeFeedback onPress={()=>{
-                                this.props.image(masculino4)
+                        this.props.image(masculino4,'Roupa 4','R$140,00')
                     }}>
                         <View style={styles.produto}>
                             <Text style={styles.novo}>Novo!</Text>

@@ -33,8 +33,8 @@ class Categorias extends Component {
         }
     }
 
-    navegar(imagem){
-        this.props.navigation.navigate('Produto',{image:imagem})
+    navegar(imagem,nome,preco){
+        this.props.navigation.navigate('Produto',{image:imagem,nome:nome,preco:preco})
     }
 
     render() {
