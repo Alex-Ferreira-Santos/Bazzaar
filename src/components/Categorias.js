@@ -25,7 +25,6 @@ class Categorias extends Component {
     atribuiParams(){
         const params = this.props.route.params
         this.state.promocoes = params.promocoes
-        console.log(params)
         if(this.state.promocoes){
             this.state.show = params.show
             this.state.masculino = params.masculino

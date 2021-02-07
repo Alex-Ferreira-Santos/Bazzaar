@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View,Text,Image,ScrollView} from 'react-native'
+import {View,Text,Image,ScrollView,TouchableNativeFeedback} from 'react-native'
 import styles from '../styles/produto'
 
 class Feminino extends Component {
@@ -11,29 +11,45 @@ class Feminino extends Component {
         return (
             <View>
                 <ScrollView contentContainerStyle={styles.moda}>
-                    <View style={styles.produto}>
-                        <Image source={feminino} style={styles.roupa}/>
-                        <Text>Roupa 1</Text>
-                        <Text>R$40,00</Text>
-                    </View>
+                    <TouchableNativeFeedback onPress={()=>{
+                            this.props.image(feminino)
+                    }}>
+                        <View style={styles.produto}>          
+                            <Image source={feminino} style={styles.roupa}/>
+                            <Text>Roupa 1</Text>
+                            <Text>R$40,00</Text>
+                        </View>
+                    </TouchableNativeFeedback>
 
-                    <View style={styles.produto}>
-                        <Image source={feminino2} style={styles.roupa}/>
-                        <Text>Roupa 2</Text>
-                        <Text>R$60,00</Text>
-                    </View>
+                    <TouchableNativeFeedback onPress={()=>{
+                            this.props.image(feminino2)
+                    }}>
+                        <View style={styles.produto}>               
+                            <Image source={feminino2} style={styles.roupa}/>   
+                            <Text>Roupa 2</Text>
+                            <Text>R$60,00</Text>
+                        </View>
+                    </TouchableNativeFeedback>
 
-                    <View style={styles.produto}>
-                        <Image source={feminino3} style={styles.roupa}/>
-                        <Text>Roupa 3</Text>
-                        <Text>R$80,00</Text>
-                    </View>
+                    <TouchableNativeFeedback onPress={()=>{
+                            this.props.image(feminino3)
+                    }}>
+                        <View style={styles.produto}>     
+                            <Image source={feminino3} style={styles.roupa}/>
+                            <Text>Roupa 3</Text>
+                            <Text>R$80,00</Text>
+                        </View>
+                    </TouchableNativeFeedback>
 
-                    <View style={styles.produto}>
-                        <Image source={feminino4} style={styles.roupa}/>
-                        <Text>Roupa 4</Text>
-                        <Text>R$140,00</Text>
-                    </View>
+                    <TouchableNativeFeedback onPress={()=>{
+                            this.props.image(feminino4)
+                    }}>
+                        <View style={styles.produto}>                        
+                            <Image source={feminino4} style={styles.roupa}/>
+                            <Text>Roupa 4</Text>
+                            <Text>R$140,00</Text>
+                        </View>
+                    </TouchableNativeFeedback>
                 </ScrollView>
             </View>
         )
