@@ -21,14 +21,14 @@ class Produto extends Component {
                     <View style={styles.buttons}>
                         <TouchableHighlight style={styles.backButton} onPress={()=>{
                             this.props.navigation.goBack()
-                        }} underlayColor='#bababa'>
+                        }} underlayColor='#bababa' accessible={true} accessibilityLabel='botão de voltar' accessibilityComponentType="button" >
                             <Text style={styles.buttonText}>Voltar</Text>
                         </TouchableHighlight>
                         <TouchableHighlight style={styles.buyButton} underlayColor='#3f77ab' onPress={()=>{
                             alert('produto comprado com sucesso')
                             this.setState({unidades: this.state.unidades-1})
                             this.props.navigation.goBack()
-                        }}>
+                        }} accessible={true} accessibilityLabel='botão de comprar' accessibilityComponentType="button" >
                             <Text style={styles.buttonText}>Comprar</Text>
                         </TouchableHighlight>
                     </View>

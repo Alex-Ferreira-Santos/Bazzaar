@@ -16,6 +16,7 @@ class Categorias extends Component {
             masculino: false,
             novidades: false,
             promocoes: false,
+            acessibilidadeButton:'Clique no topo da tela para ocultar o menu de categorias'
         }
         this.atribuiParams = this.atribuiParams.bind(this)
         this.navegar = this.navegar.bind(this)
@@ -49,14 +50,16 @@ class Categorias extends Component {
                         params.show = false
                         params.text = 'Expandir'
                         params.name = 'arrow-down'
+                        this.state.acessibilidadeButton = 'Clique no topo da tela para expandir o menu de categorias'
                         this.setState({show:params.show})
+                        
                     }else{
                         params.show = true 
                         params.text = 'Ocultar'
                         params.name = 'arrow-up-sharp'
                         this.setState({show:params.show})
                     }
-                }} underlayColor='#EA9700'>
+                }} underlayColor='#EA9700' accessible={true} accessibilityLabel={this.state.acessibilidadeButton} accessibilityComponentType="button">
                     <View style={{flexDirection: 'row'}}>
                         <Text style={styles.buttonText}>{params.text}</Text>
                         <Icon name={params.name} size={25} color='black'/>
@@ -65,7 +68,7 @@ class Categorias extends Component {
 
                 {this.state.show && (<View style={styles.category}>
 
-                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
+                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' accessibilityComponentType="button" accessible={true} accessibilityLabel='categoria de novidades' onPress={()=>{
                         
                         params.promocoes = false
                         this.setState({feminino: false})
@@ -76,7 +79,7 @@ class Categorias extends Component {
                         <Text>Novidades</Text>
                     </TouchableHighlight>
 
-                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
+                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' accessibilityComponentType="button" accessible={true} accessibilityLabel='categoria de promoções'  onPress={()=>{
                         params.promocoes = false
                         this.setState({feminino: false})
                         this.setState({masculino: false})
@@ -86,7 +89,7 @@ class Categorias extends Component {
                         <Text>Promoções</Text>
                     </TouchableHighlight>
 
-                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
+                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' accessibilityComponentType="button" accessible={true} accessibilityLabel='categoria Feminina' onPress={()=>{
                         params.promocoes = false
                         this.setState({feminino: true})
                         this.setState({masculino: false})
@@ -96,7 +99,7 @@ class Categorias extends Component {
                         <Text>Feminino</Text>
                     </TouchableHighlight>
 
-                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' onPress={()=>{
+                    <TouchableHighlight style={styles.categoryButton} underlayColor='#E3E3E3' accessibilityComponentType="button" accessible={true} accessibilityLabel='categoria Masculina' onPress={()=>{
                         params.promocoes = false
                         this.setState({masculino: true})
                         this.setState({feminino: false})

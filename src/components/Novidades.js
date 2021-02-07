@@ -14,7 +14,7 @@ class Novidades extends Component {
 
                     <TouchableNativeFeedback onPress={()=>{
                         this.props.image(feminino,'Roupa 1','R$40,00')
-                    }}>
+                    }} accessibilityComponentType="button" accessible={true} accessibilityLabel='Roupa 1, preço de 40 reais'>
                         <View style={styles.produto}>
                             <Text style={styles.novo}>Novo!</Text>
                             <Image source={feminino} style={styles.roupa}/>
@@ -25,7 +25,7 @@ class Novidades extends Component {
 
                     <TouchableNativeFeedback onPress={()=>{
                         this.props.image(feminino2,'Roupa 2','R$80,00')
-                    }}>
+                    }} accessibilityComponentType="button" accessible={true} accessibilityLabel='Roupa 2, preço de 80 reais'>
                     <View style={styles.produto}>
                         <Text style={styles.novo}>Novo!</Text>
                         <Image source={feminino2} style={styles.roupa}/>
@@ -36,7 +36,7 @@ class Novidades extends Component {
 
                     <TouchableNativeFeedback onPress={()=>{
                         this.props.image(masculino3,'Roupa 3','R$120,00')
-                    }}>
+                    }} accessibilityComponentType="button" accessible={true} accessibilityLabel='Roupa 3, preço de 120 reais'>
                         <View style={styles.produto}>
                             <Text style={styles.novo}>Novo!</Text>
                             <Image source={masculino3} style={styles.roupa}/>
@@ -47,7 +47,7 @@ class Novidades extends Component {
 
                     <TouchableNativeFeedback onPress={()=>{
                         this.props.image(masculino4,'Roupa 4','R$140,00')
-                    }}>
+                    }} accessibilityComponentType="button" accessible={true} accessibilityLabel='Roupa 4, preço de 140 reais'>
                         <View style={styles.produto}>
                             <Text style={styles.novo}>Novo!</Text>
                             <Image source={masculino4} style={styles.roupa}/>
