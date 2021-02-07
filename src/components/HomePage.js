@@ -4,15 +4,6 @@ import styles from '../styles/index'
 import Header from './Header'
 
 class Home extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-        
-    }
-    
-  }
-
-
   render(){
     const capa = require('../img/model.jpg')
     return (

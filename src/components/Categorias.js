@@ -11,17 +11,17 @@ class Categorias extends Component {
     constructor(props){
         super(props)
         this.state = {
-            name: 'arrow-up-sharp',
             show: true,
-            text:'Ocultar',
             feminino: false,
             masculino: false,
             novidades: false,
             promocoes: false,
         }
         this.atribuiParams = this.atribuiParams.bind(this)
+        this.navegar = this.navegar.bind(this)
         this.atribuiParams()
     }
+
     atribuiParams(){
         const params = this.props.route.params
         this.state.promocoes = params.promocoes
@@ -31,9 +31,12 @@ class Categorias extends Component {
             this.state.feminino = params.feminino
             this.state.novidades = params.novidades
         }
-        this.state.text = params.text
-        this.state.name = params.name
     }
+
+    navegar(imagem){
+        this.props.navigation.navigate('Produto',{image:imagem})
+    }
+
     render() {
         const params = this.props.route.params
         if(params.promocoes){
@@ -55,8 +58,8 @@ class Categorias extends Component {
                     }
                 }} underlayColor='#EA9700'>
                     <View style={{flexDirection: 'row'}}>
-                        <Text style={styles.buttonText}>{this.state.text}</Text>
-                        <Icon name={this.state.name} size={25} color='black'/>
+                        <Text style={styles.buttonText}>{params.text}</Text>
+                        <Icon name={params.name} size={25} color='black'/>
                     </View>
                 </TouchableHighlight>
 
@@ -106,25 +109,25 @@ class Categorias extends Component {
                     {this.state.feminino && ( 
                         <ScrollView>
                             <Text style={styles.subtitle}>Moda Feminina</Text>
-                            <Feminino/>
+                            <Feminino image={this.navegar}/>
                         </ScrollView>
                     )}
                     {this.state.masculino && ( 
                         <ScrollView>
                             <Text style={styles.subtitle}>Moda Masculina</Text>
-                            <Masculino/>
+                            <Masculino image={this.navegar}/>
                         </ScrollView>
                     )}
                     {this.state.novidades && ( 
                         <ScrollView>
                             <Text style={styles.subtitle}>Novidades</Text>
-                            <Novidades/>
+                            <Novidades image={this.navegar}/>
                         </ScrollView>
                     )}
                     {this.state.promocoes && ( 
                         <ScrollView>
                             <Text style={styles.subtitle}>Promoções</Text>
-                            <Promocoes/>
+                            <Promocoes image={this.navegar}/>
                         </ScrollView>
                     )}
                     
