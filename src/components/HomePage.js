@@ -20,7 +20,6 @@ class Home extends Component {
               <Text style={styles.off}>Até 50% de desconto</Text>
               <TouchableOpacity style={styles.button} accessible={true} accessibilityLabel={'Toque no centro esquerdo para enviar!'} onPress={
                 ()=>this.props.navigation.navigate('Categorias',{screen:'Categorias',params:{promocoes:true,show:false,text:'Expandir',name:'arrow-down',feminino: false,masculino:false,novidades: false}})
-                //
                 }>
                 <Text style={styles.comprar}>Comprar</Text>
               </TouchableOpacity>
